@@ -1,15 +1,40 @@
 # Encare Synthetic Data Hackathon 2026
 
 ## Overview
+
 The goal of this hackathon is to generate **high-quality synthetic medical records** that preserve the **statistical and clinical characteristics** of the provided dataset while containing **no real patient data**.
 
-Participants are encouraged to experiment with methods such as:
+---
 
-- Statistical sampling
-- GANs
-- Diffusion models
-- LLM-based generation
-- Hybrid generative pipelines
+## Table of Contents
+
+- [How It Works](#how-it-works)
+- [Rules](#rules)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [Dataset](#dataset)
+- [Validation](#validation)
+- [Submission](#submission)
+
+---
+
+# How It Works
+
+1. Each team can make a fork of this **repository** as a base to work from.
+2. Feel free to use any method you like to generate synthetic medical records. Original and creative ideas are highly encouraged!
+3. Save your generated dataset in the `/results` folder.
+4. **Submit the synthetic dataset** each as many times as you want. The submissions will be tested once a day in a batch job.
+5. After deadline, each repostitory should be **made public** to be able to win.
+
+---
+
+# Rules
+
+- Do **not** share the original dataset outside of the hackathon.
+- Do **not** modify the original dataset.
+- You may use **any libraries, tools, or AI assistants**.
+- The generated dataset must be **reproducible from the code in your repo**.
+- Generated data should preserve **statistical realism** while avoiding **patient-level replication**.
 
 ---
 
@@ -79,8 +104,8 @@ Encare-Hackathon-2026
 ├── results/
 │   └── generated synthetic datasets
 │
-├── examples/
-│   └── baseline generators (e.g. random sampler)
+├── approaches/
+│   └── a placeholder approach
 │
 ├── data_processor.py
 │   Data cleaning and preprocessing
@@ -112,7 +137,7 @@ Your goal is to generate **synthetic records with similar statistical properties
 
 # Validation
 
-The repository includes validation tools to check generated datasets.
+The repository includes validation tools to check generated datasets. These are only intended as **basic checks** and does not garuantee a high score .
 
 ### Statistical validation
 - Kolmogorov–Smirnov (KS) tests
@@ -120,21 +145,6 @@ The repository includes validation tools to check generated datasets.
 
 ### Clinical validation
 - Rule-based plausibility checks
-
-⚠️ Passing these tests **does not guarantee a high score**.  
-They are intended only as **basic sanity checks**.
-
----
-
-# Example Baseline
-
-A simple baseline generator is provided in:
-
-```
-/examples
-```
-
-Participants are encouraged to **build their own generators**.
 
 ---
 
@@ -149,22 +159,3 @@ Save your synthetic output in:
 ```
 
 After the submission deadline, all repositories will be **made public**.
-
----
-
-# Requirements
-
-- Python 3.9+
-- pip
-
-Recommended tools:
-
-- Visual Studio Code
-- Jupyter Notebook
-
----
-
-# Notes
-
-- Do **not modify the original dataset**.
-- Generated datasets should preserve **statistical realism** while avoiding **patient-level replication**.
